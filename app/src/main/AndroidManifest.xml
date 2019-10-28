@@ -6,6 +6,10 @@
         android:name="android.hardware.camera"
         android:required="false" />
 
+    <uses-feature android:name="android.hardware.camera"
+        android:required="false"
+        />
+
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -66,8 +70,14 @@
             android:label="@string/title_MapsActivity">
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
-            android:value="au.edu.usc.s_k267.myreceipts.CrimFragment" />
+            android:value="au.edu.usc.s_k267.CrimePagerActivity" />
     </activity>
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.bignerdranch.android.criminalintent.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+        </provider>
     </application>
 
 </manifest>
